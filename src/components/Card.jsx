@@ -24,16 +24,8 @@ function Card({ pokemon, onClick }) {
 
   return (
     <div
-      style={{
-        color: "white",
-        border: "1px solid gray",
-        borderRadius: "10px",
-        padding: "10px",
-        margin: "10px",
-        textAlign: "center",
-        cursor: "pointer",
-        backgroundColor: backgroundColor
-      }}
+      className="pokemon-card"
+      style={{ backgroundColor: backgroundColor }}
       onClick={onClick}
     >
       <h3>#{pokemon?.id} {pokemon?.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h3>
