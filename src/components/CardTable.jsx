@@ -42,7 +42,7 @@ function CardTable({sendPokemon}) {
 
   return (
     <div>
-      <div style={{display: "grid", gridTemplateColumns: "repeat(5, 1fr)"}}>
+      <div className="pokemon-grid">
         { pokemons.length > 0 && pokemons.map((pokemon) => (
           <Card key={pokemon.id} pokemon={pokemon} onClick={() => sendPokemon(pokemon)}/>
         ))}

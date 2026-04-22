@@ -7,7 +7,6 @@ body {
   margin: 0 auto;
   text-align: center;
   border-inline: 1px solid var(--border);
-  min-height: 100svh;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -64,18 +63,22 @@ p {
   border-radius: 10px;
   padding: 10px;
   margin: 10px;
-  min-height: 200px;
 }
 
 .right {
   min-height: 100%;
 }
 
+.detailImg {
+  width: 200px;
+  height: 200px;
+}
+
 .navbar {
   position: sticky;
   top: 0;
   left: 0;
-  width: 100%;
+  max-width: auto;
   
   display: flex;
   justify-content: space-between;
@@ -83,7 +86,7 @@ p {
 
   padding: 10px 20px;
   background-color: #87ceeb; /* világoskék */
-  box-sizing: border-box;
+  
 }
 
 .logo {
@@ -125,7 +128,7 @@ p {
 
 .pokemon-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 10px;
 }
 
@@ -154,6 +157,7 @@ p {
   }
   
   .left {
+    min-height: auto;
     padding: 8px;
     margin: 0;
     position: relative;
@@ -182,8 +186,8 @@ p {
     font-size: 12px;
   }
 
-  .navbar {
-    padding: 8px 12px;
+  .pokemon-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
 
   .nav-btn {

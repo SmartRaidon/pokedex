@@ -10,7 +10,7 @@ function DetailBox({receivedPokemon}) {
   return (
     <div>
       <h3>{receivedPokemon.name.charAt(0).toUpperCase() + receivedPokemon.name.slice(1)}</h3>
-      <img src={receivedPokemon?.sprites.front_default} alt={receivedPokemon.name} style={{minHeight:"300px"}}/>
+      <img src={receivedPokemon?.sprites.front_default} alt={receivedPokemon.name} className="detailImg"/>
       <p>ID: {receivedPokemon.id}</p>
       <p>Height: {receivedPokemon.height}</p>
       <p>Weight: {receivedPokemon.weight}</p>
